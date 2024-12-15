@@ -49,8 +49,34 @@ After running the container, you can start using CUDA, TensorRT, cuDNN, and ROS 
 
 ### CUDA
 You can check the CUDA version and GPU availability using the following commands:
-   ##### nvcc --version  #Display the CUDA version
-   ##### nvidia-smi      #Show NVIDIA GPU status and usage
+   ##### nvcc --version  ######Display the CUDA version
+   ##### nvidia-smi      ######Show NVIDIA GPU status and usage
+
+### TensorRT
+To test TensorRT, a simple Python script is provided that prints the TensorRT version:
+   ##### python3 -c "import tensorrt as trt; print('TensorRT version:', trt.__version__)"
+
+### cuDNN
+To verify that cuDNN is installed correctly, you can check the cuDNN version using the following Python script:
+   ##### python3 -c "import ctypes; libcudnn = ctypes.CDLL('libcudnn.so'); print('cuDNN version:', libcudnn.cudnnGetVersion())"
+This will print the installed cuDNN version, ensuring it's properly configured for your deep learning models.
+
+### ROS1
+The Docker image comes with ROS Noetic pre-installed. To test ROS1, you can run the following steps:
+Start **roscore** in the background:
+   ##### roscore &
 
 
-   
+## Validation Script
+The repository also includes a validate.sh script to test the installation of CUDA, TensorRT, cuDNN, and ROS. It performs the following checks:
+
+- CUDA: Verifies that nvcc is available and checks GPU status using nvidia-smi.
+- TensorRT: Runs a simple Python script to check if TensorRT is correctly installed.
+- cuDNN: Checks the cuDNN version using a Python script.
+- ROS1: Starts roscore and runs both a publisher and a subscriber to ensure that ROS communication is working.
+
+You can run the validation script with:
+   ##### /usr/local/bin/validate.sh
+
+## Testing
+After building and running the Docker container, you can verify everything is working by running the validation script and checking the results of CUDA, TensorRT, cuDNN, and ROS1.
