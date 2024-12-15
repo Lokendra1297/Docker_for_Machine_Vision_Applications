@@ -48,7 +48,9 @@ To use this Docker image, you must have the following:
 After running the container, you can start using CUDA, TensorRT, cuDNN, and ROS as follows:
 
 ### CUDA
-1. You can check the CUDA version and GPU availability using the following commands:
-   **nvcc --version  # Display the CUDA version**
-   **nvidia-smi      # Show NVIDIA GPU status and usage**
+You can check the CUDA version and GPU availability using the following commands:
+**nvcc --version  # Display the CUDA version**
+**nvidia-smi      # Show NVIDIA GPU status and usage**
+
+
    
