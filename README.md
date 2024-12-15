@@ -39,8 +39,8 @@ To use this Docker image, you must have the following:
    ##### docker build -t Docker_for_Machine_Vision .
 
 2. Run the Docker container: To run the image with GPU support, use the following command:
-   docker run --gpus all -it Docker_for_Machine_Vision bash
-   docker run -it Docker_for_Machine_Vision bash
+   ##### docker run --gpus all -it Docker_for_Machine_Vision bash
+   ##### docker run -it Docker_for_Machine_Vision bash
 
 3. Access the container: Once the container is running, you will be inside the /workspace directory where you can execute your tasks or load your models.
 
@@ -49,8 +49,8 @@ After running the container, you can start using CUDA, TensorRT, cuDNN, and ROS 
 
 ### CUDA
 You can check the CUDA version and GPU availability using the following commands:
-nvcc --version  # Display the CUDA version
-nvidia-smi      # Show NVIDIA GPU status and usage
+   ##### nvcc --version  #Display the CUDA version
+   ##### nvidia-smi      #Show NVIDIA GPU status and usage
 
 
    
