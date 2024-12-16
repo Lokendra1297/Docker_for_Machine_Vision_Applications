@@ -36,11 +36,11 @@ To use this Docker image, you must have the following:
 ## Docker Setup
 
 1. Build the Docker image: Clone the repository or create your own Dockerfile with the setup provided and build the Docker image.
-   ##### docker build -t Docker_for_Machine_Vision .
+   ##### docker build -t <YOUR IMAGE NAME> .
 
 2. Run the Docker container: To run the image with GPU support, use the following command:
-   ##### docker run --gpus all -it Docker_for_Machine_Vision bash
-   ##### docker run -it Docker_for_Machine_Vision bash
+   ##### docker run --gpus all -it <YOUR IMAGE NAME> bash
+   ##### docker run -it <YOUR IMAGE NAME> bash
 
 3. Access the container: Once the container is running, you will be inside the /workspace directory where you can execute your tasks or load your models.
 
