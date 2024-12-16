@@ -27,6 +27,8 @@ This Docker image is built on top of the nvidia/cuda:12.6.3-base-ubuntu20.04 ima
 ## Prerequisites
 To use this Docker image, you must have the following:
 
+- Important Note: Please download the required file from the Below link and place it in the same folder as the Dockerfile before building the Docker image.
+- **https://drive.google.com/file/d/1kyBS-d9evHabnW8dYVrWFMV4DztfmOL8/view?usp=drive_link**
 - Docker installed on your system.
 - NVIDIA GPU and the Nvidia-docker runtime installed for GPU support.
 - NVIDIA drivers installed for your GPU.
